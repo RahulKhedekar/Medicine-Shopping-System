@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="MasterPage_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Online Medicine Shopping</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet"/>
+    <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" /> -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:SqlDataSource ID="Sample" runat="server" ConnectionString="<%$ ConnectionStrings:OMSConnectionString %>" SelectCommand="SELECT * FROM [User_info]"></asp:SqlDataSource>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-sm-start fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="../Admin/Admin.aspx"><img src="../image/Logo/logo.jpg" height="40" width="150px" /></a>
+                    <button class="navbar-toggler align-self-start" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-dark p-3 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end mobileMenu" id="navbarSupportedContent">
+                        <div class="srch">
+                            <asp:TextBox ID="TextBox1" runat="server" placeholder=" Looking for Medicines?"></asp:TextBox>
+                            <button id="TextBoxSearch" type="submit">Search</button>
+                        </div>                        
+                        <ul id="hel" class="navbar-nav align-self-stretch">
+                            <li class="nav-item"><asp:Label ID="LSuccess1" class="nav-link" runat="server"></asp:Label></li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b class="b"><i class="fa fa-book" aria-hidden="true"></i> Products</b></a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item coll" href="../Admin/AddProduct.aspx">Add Product</a>
+                            <a class="dropdown-item coll" href="../Admin/DeleteProduct.aspx">Update/Delete Product</a>
+                            <a class="dropdown-item coll" href="../Admin/AddCategory.aspx">Add Category</a>
+                            <a class="dropdown-item coll" href="../Admin/DisplayOrder.aspx">All Orders</a>
+                            <a class="dropdown-item coll" href="../Admin/ViewUser.aspx">View Users</a>
+                            </div>
+                            </li>                            
+                            <div class="icon-logout"><i class="fa fa-sign-out" aria-hidden="true"></i><asp:Button ID="logout" class="btn-without-border" runat="server" Text="Logout" Onclick="logout_Click"/></div>
+                        </ul>                                                     
+                    </div>
+            </div>
+        </nav>
+        <div class="overlay"></div>
+        <div class="container my-5">
+            <div class="col-md-12"></div>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+<!-- Footer -->     
+        <footer class="page-footer bg-dark" id="footer">
+            <div class="bg-dark">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+       
+                <div class="col-md-12 text-center"> 
+                    <a href="#"><i class="fa fa-facebook-f mr-4"> </i></a>         
+                    <a href="#"><i class="fa fa-twitter  mr-4"> </i></a>
+                    <a href="#"><i class="fa fa-google-plus  mr-4"> </i></a>
+                    <a href="#"><i class="fa fa-linkedin  mr-4"> </i></a>
+                    <a href="#"><i class="fa fa-instagram "> </i></a> 
+                    </div>
+
+                </div>
+            </div>
+            </div>
+            <div class="bg-dark">
+            <div class="container text-center text-md-left mt-5">
+            <div class="row">
+            
+                <div class="col-md-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">About</h6>
+                <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 125px; height: 2px" />
+                    <ul class="list-unstyled">
+                    <li class="my-2"><a href="#">Contact Us</a></li>        
+                    <li class="my-2"><a href="#">About Us</a></li>
+                    <li class="my-2"><a href="#">Careers</a></li>
+                    <li class="my-2"> <a href="#">Press</a></li>         
+                    </ul>
+                </div>
+
+                <div class="col-md-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">Help</h6>
+                <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 85px; height: 2px" />
+       
+                    <ul class="list-unstyled">
+                    <li class="my-2"><a href="#">Payment</a></li>        
+                    <li class="my-2"><a href="#">Shipping</a></li>
+                    <li class="my-2"><a href="#">Cancellation & Return</a></li>
+                    <li class="my-2"> <a href="#">FAQ<a></li>         
+                    </ul>
+                </div>
+  
+                <div class="col-md-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">Policy</h6>
+                <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px">
+                    <ul class="list-unstyled">
+                    <li class="my-2"><a href="#">Return Policy</a></li>        
+                    <li class="my-2"><a href="#">Terms Of Use</a></li>
+                    <li class="my-2"><a href="#">Security</a></li>
+                    <li class="my-2"> <a href="#">Privacy</a></li>         
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 75px; height: 2px">
+                    <ul class="list-unstyled">
+                    <li class="my-2"><i class="fa fa-home mr-3"></i> Shaitan gali,    Khatra Mahel,Andher Nagar,Shamshan Ke samne</li>
+                    <li class="my-2"><i class="fa fa-envelope mr-3"></i> medicineshop@gmail.com</li>
+                    <li class="my-2"><i class="fa fa-phone mr-3"></i> + 01 234 567 88</li>
+                    <li class="my-2"><i class="fa fa-print mr-3"></i> + 01 234 567 89</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+
+            <div class="footer-copyright text-center py-3">
+            <p>&copy; 2020
+            <a href="#"> All Rights Reserved</a></p>
+            </div>
+        </footer>
+<!-- Footer End -->                                        
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            var docHeight = $(window).height();
+            var footerHeight = $('#footer').height();
+            var footerTop = $('#footer').position().top + footerHeight;
+
+            if (footerTop < docHeight)
+                $('#footer').css('margin-top', 50 + (docHeight - footerTop) + 'px');
+        });
+    </script>
+</body>
+</html>

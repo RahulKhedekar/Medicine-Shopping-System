@@ -36,23 +36,25 @@
 {
     height:35px;
     border:5px;
+
     border-radius:5px 5px 5px 5px;
 }
 #TextBoxSearch
 {
     height:35px;
     border:5px;
+    margin-right:6px;
     border-radius:5px 5px 5px 5px;
 }
 
 .navbar
 {
-    background-color:aquamarine !important;
+    background-color:rgb(16,145,126) !important;
 }
 
 .collapse
 {
-    background-color:aquamarine !important;
+    background-color:rgb(16,145,126) !important;
 }
 
 .navbar .navbar-nav li a 
@@ -60,4 +62,147 @@
     color:#000 !important;
 }
 
+#LSuccess1
+{
+    color:#000 !important;
+}
+
+.navbar-nav .nav-link
+{
+    margin:6px;
+}
+
+.carousel-indicators li {
+  width: 10px!important;
+  height: 10px!important;
+  border-radius: 50%;
+}
+.carousel .item {
+  height: 500px;
+}
+.item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
+.center
+{
+    height:395px;
+    width:320px;
+    position:absolute;
+    top:20px;
+    bottom:0;
+    left:0;
+    right:15px;
+    margin:auto;
+    box-shadow:0 0 3px 0 rgba(0,0,0,0.3);
+    padding:20px;
+    background:#fff;
+    border-radius:5px 5px 5px 5px;
+}
+
+body
+{
+    background:#f7f4f4;
+
+}
+
+.center1
+{
+    height:320px;
+    width:320px;
+    position:absolute;
+    top:00;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    box-shadow:0 0 3px 0 rgba(0,0,0,0.3);
+    padding:20px;
+    background:#fff;
+    border-radius:5px 5px 5px 5px;
+}
+
+.btn-without-border 
+{ 
+    border: none; 
+    outline: none; 
+    background-color:rgb(16,145,126) !important;
+    color:#000 !important;
+    margin-top:13px;
+    
+}
+
+.icon-logout
+{
+    margin-left:13px;
+}
+
+.logout
+{
+    color:#000 !important;
+}
+.fa fa-sign-out
+{
+    color:#000 !important;
+}
+
+.input
+{
+    width: 100%;
+    height:10%;
+    position: relative;
+    margin: 5px 0 0 0;
+    top: 0px;
+    left: 0px;
+}
+
+.input1
+{
+    width: 100%;
+    height:12%;
+    margin: 5px 0 0 0;
+}
+
+.input2
+{
+    width: 100%;
+    height:12%;
+    margin: 8px 0 0 0;
+}
+.center2
+{
+    height:390px;
+    width:320px;
+    position:absolute;
+    top:00;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    box-shadow:0 0 3px 0 rgba(0,0,0,0.3);
+    padding:20px;
+    background:#fff;
+    border-radius:5px 5px 5px 5px;
+}
+
+.hrlogin
+{
+    margin:0 0 5px 0;
+}
+
+.row ul li a:hover {
+     color: #d33b33;
+     border-color: #d33b33;
+     padding-left: 20px;
+     text-decoration:underline;
+ }
+
+
+
+
+    
 
